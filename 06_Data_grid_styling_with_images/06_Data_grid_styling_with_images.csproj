@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>_06_Data_grid_styling_with_images</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Actor.png" />
+    <None Remove="Resources\DocumentGroup.png" />
+    <None Remove="Resources\FolderOpened.png" />
+    <None Remove="Resources\SettingsGroup.png" />
+    <None Remove="Resources\Statistics.png" />
+    <None Remove="Resources\StatusInformationOutlineNoColor.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Actor.png" />
+    <Resource Include="Resources\DocumentGroup.png" />
+    <Resource Include="Resources\FolderOpened.png" />
+    <Resource Include="Resources\SettingsGroup.png" />
+    <Resource Include="Resources\Statistics.png" />
+    <Resource Include="Resources\StatusInformationOutlineNoColor.png" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,63 @@
+﻿<Window x:Class="_09_Speech_bubbles_on_click.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_09_Speech_bubbles_on_click"
+        mc:Ignorable="d"
+        Title="09_Speech_bubbles_on_click" Height="244" Width="425" FontSize="16">
+    <Grid>
+        <Button Content="Button 1" Margin="32,30,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="99"></Button>
+        <Button Content="Button 2" Margin="32,73,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="99"></Button>
+        <Button Content="Button 3" Margin="32,115,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="99"></Button>
+        <Button Content="Button 4" Margin="32,156,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="99"></Button>
+        <Button Content="i" Margin="141,156,0,0" Click="Button4_i_Click" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="25"></Button>
+
+        <Grid Name="SpeechBubble1" Margin="154,30,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="167" MouseDown="SpeechBubbleClick">
+            <Rectangle Stroke="Black" RadiusX="5" RadiusY="5" Fill="AntiqueWhite"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Here you can import data" Margin="5" FontSize="12" TextWrapping="WrapWithOverflow"/>
+                <TextBlock Text="x" FontWeight="Bold" Margin="5" FontSize="10" MouseDown="SpeechBubbleTextboxClick"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Name="SpeechBubble2" Margin="154,73,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="167" MouseDown="SpeechBubbleClick">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="76*"/>
+                <ColumnDefinition Width="90*"/>
+            </Grid.ColumnDefinitions>
+            <Rectangle Stroke="Black" RadiusX="5" RadiusY="5" Fill="AntiqueWhite" Grid.ColumnSpan="3"/>
+            <StackPanel Orientation="Horizontal" Grid.ColumnSpan="3">
+                <TextBlock Text="Here you can export data" Margin="5" FontSize="12" TextWrapping="WrapWithOverflow"/>
+                <TextBlock Text="x" FontWeight="Bold" Margin="5" FontSize="10"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Name="SpeechBubble3" Margin="154,114,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="167" MouseDown="SpeechBubbleClick">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="93*"/>
+                <ColumnDefinition Width="74*"/>
+            </Grid.ColumnDefinitions>
+            <Rectangle Stroke="Black" RadiusX="5" RadiusY="5" Fill="AntiqueWhite" Grid.ColumnSpan="2"/>
+            <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2">
+                <TextBlock Text="Here are the settings" Margin="5" FontSize="12" TextWrapping="WrapWithOverflow"/>
+                <TextBlock Text="x" FontWeight="Bold" Margin="5" FontSize="10" />
+            </StackPanel>
+        </Grid>
+
+        <Grid Name="InfoButton1" Margin="183,150,0,0" Height="44" VerticalAlignment="Top" HorizontalAlignment="Left" Width="167" 
+              Visibility="Collapsed" 
+              MouseDown="CloseInfoBubble1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="93*"/>
+                <ColumnDefinition Width="74*"/>
+            </Grid.ColumnDefinitions>
+            <Rectangle Stroke="Black" RadiusX="5" RadiusY="5" Fill="AntiqueWhite" Grid.ColumnSpan="2"/>
+            <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2">
+                <TextBlock Text="This is an info button to explain something" Margin="5" FontSize="12" TextWrapping="WrapWithOverflow" Width="139"/>
+                <TextBlock Text="x" FontWeight="Bold" Margin="5" FontSize="10" MouseDown="SpeechBubbleClick" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
