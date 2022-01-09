@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <RootNamespace>_12_MVVM_concept_unit_tests</RootNamespace>
     <Nullable>enable</Nullable>
 
@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\12_MVVM_concept_business_logic\12_MVVM_concept_business_logic.csproj" />
+    <ProjectReference Include="..\12_MVVM_concept_with_databinding\12_MVVM_concept_with_databinding.csproj" />
   </ItemGroup>
 
 </Project>

@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_09_Speech_bubbles_on_click"
         mc:Ignorable="d"
-        Title="09_Speech_bubbles_on_click" Height="244" Width="425" FontSize="16">
+        Title="09_Speech_bubbles_on_click" Height="280" Width="425" FontSize="16" Background="WhiteSmoke">
     <Grid>
-        <Button Content="Button 1" Margin="32,30,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="99"></Button>
-        <Button Content="Button 2" Margin="32,73,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="99"></Button>
-        <Button Content="Button 3" Margin="32,115,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="99"></Button>
-        <Button Content="Button 4" Margin="32,156,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="99"></Button>
-        <Button Content="i" Margin="141,156,0,0" Click="Button4_i_Click" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="25"></Button>
+        <Button Content="Button 1" Margin="66,38,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="99"></Button>
+        <Button Content="Button 2" Margin="66,81,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="99"></Button>
+        <Button Content="Button 3" Margin="66,123,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="99"></Button>
+        <Button Content="Button 4" Margin="66,164,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="99"></Button>
+        <Button Content="i" Margin="175,164,0,0" Click="Button4_i_Click" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="25"></Button>
 
-        <Grid Name="SpeechBubble1" Margin="154,30,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="167" MouseDown="SpeechBubbleClick">
+        <Grid Name="SpeechBubble1" Margin="188,38,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="167" MouseDown="SpeechBubbleClick">
             <Rectangle Stroke="Black" RadiusX="5" RadiusY="5" Fill="AntiqueWhite"/>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Here you can import data" Margin="5" FontSize="12" TextWrapping="WrapWithOverflow"/>
@@ -21,7 +21,7 @@
             </StackPanel>
         </Grid>
 
-        <Grid Name="SpeechBubble2" Margin="154,73,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="167" MouseDown="SpeechBubbleClick">
+        <Grid Name="SpeechBubble2" Margin="188,81,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="167" MouseDown="SpeechBubbleClick">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="76*"/>
@@ -34,7 +34,7 @@
             </StackPanel>
         </Grid>
 
-        <Grid Name="SpeechBubble3" Margin="154,114,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="167" MouseDown="SpeechBubbleClick">
+        <Grid Name="SpeechBubble3" Margin="188,122,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="167" MouseDown="SpeechBubbleClick">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="93*"/>
                 <ColumnDefinition Width="74*"/>

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace _12_MVVM_concept_with_databinding
+namespace _12_MVVM_businesslogic
 {
 	/// <summary>
 	/// Interaction logic for App.xaml

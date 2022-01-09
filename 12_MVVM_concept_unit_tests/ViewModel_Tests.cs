@@ -1,4 +1,4 @@
-using _12_MVVM_concept_with_databinding;
+using _12_MVVM_businesslogic;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -21,91 +21,82 @@ namespace _12_MVVM_concept_unit_tests
 	[TestClass]
 	public class ViewModel_Tests
 	{
-        private DummyModel _M;
-        private ViewModel _Sut;
-
-        private void Setup()
-        {
-            _M = new DummyModel();
-            _Sut = new ViewModel(_M);
-        }
-
-        /// <summary>
-        /// Prüft, ob die Controls richtig mit den Werten aus der Datenbank initialisiert werden
-        /// </summary>
         [TestMethod]
-        public void Init_Test()
+        public void Should_init_all_controls_correctly()
         {
-            Setup();
+            // ARRANGE
+            var m = CreateModelMock();
 
-            _Sut.InitDialog();
 
-            _Sut.TextBox1.Should().Be("a");
-            _Sut.TextBox2.Should().Be("b");
-            _Sut.CheckBox1_IsChecked.Should().BeFalse();
-            _Sut.TextBox3.Should().Be("c");
+            // ACT
+            var sut = new ViewModel(m);
+
+
+            // ASSERT
+            sut.CurrentPerson.FirstName.Should().Be("Ludwig");
+            sut.CurrentPerson.LastName.Should().Be("van Beethoven");
+            sut.CurrentPerson.IsMusician.Should().BeTrue();
+            sut.CurrentPerson.Instrument.Should().Be("Piano");
         }
 
-        /// <summary>
-        /// Wenn der Anwender die Checkbox anhakt, soll das Eingabefeld disabled werden.
-        /// </summary>
         [TestMethod]
-        public void Checkbox_Test1()
+        public void Should_enable_entryfield_when_user_checks_the_checkbox()
         {
-            Setup();
+            // ARRANGE
+            var m = CreateModelMock();
+            var sut = new ViewModel(m);
 
-            _Sut.InitDialog();
 
-            _Sut.CheckBox1_IsChecked = true;
-            _Sut.CheckBox_Checked();
-            _Sut.TextBox3_IsEnabled.Should().BeFalse();
+            // ACT
+            sut.IsMusician_ViewModel = true;
+
+
+            // ASSERT
+            sut.TextBox_Instrument_IsEnabled.Should().BeTrue();
         }
 
-        /// <summary>
-        /// Wenn der Anwender die Checkbox abhakt, soll das Eingabefeld wieder enabled werden.
-        /// </summary>
         [TestMethod]
-        public void Checkbox_Test2()
+        public void Should_disable_entryfield_when_user_unchecks_the_checkbox()
         {
-            Setup();
+            // ARRANGE
+            var m = CreateModelMock();
+            var sut = new ViewModel(m);
 
-            _Sut.InitDialog();
 
-            _Sut.CheckBox1_IsChecked = false;
-            _Sut.CheckBox_Checked();
-            _Sut.TextBox3_IsEnabled.Should().BeTrue();
+            // ACT
+            sut.IsMusician_ViewModel = false;
+
+
+            // ASSERT
+            sut.TextBox_Instrument_IsEnabled.Should().BeFalse();
         }
 
-        /// <summary>
-        /// Wenn der Anwender den Save-Button drückt, sollen die Daten abgespeichert werden.
-        /// </summary>
         [TestMethod]
-        public void Save_Button_Test()
+        public void Should_save_when_user_presses_the_savebutton()
         {
-            Setup();
+            // ARRANGE
+            var m = CreateModelMock();
+            var sut = new ViewModel(m);
 
-            _Sut.Save();
 
-            _M.Save_Method_Called.Should().BeTrue();
+            // ACT
+            sut.Save_Command.Execute(null);
+
+
+            // ASSERT
+            sut.DataWasSaved.Should().BeTrue();
         }
 
-        private class DummyModel : IModel
-        {
-            public bool Save_Method_Called = false;
-            public DatabaseTableRow Load()
+
+        private Model CreateModelMock()
+		{
+            return new Model()
             {
-                // Testdaten bereitstellen
-                var Row = new DatabaseTableRow();
-                Row.DatabaseField1 = "a";
-                Row.DatabaseField2 = "b";
-                Row.DatabaseField3 = "c";
-                return Row;
-            }
-
-            public void Save()
-            {
-                Save_Method_Called = true;
-            }
+                FirstName = "Ludwig",
+                LastName = "van Beethoven",
+                IsMusician = true,
+                Instrument = "Piano"
+            };
 		}
 	}
 }

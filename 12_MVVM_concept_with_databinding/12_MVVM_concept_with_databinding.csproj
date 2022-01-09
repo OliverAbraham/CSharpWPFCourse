@@ -8,8 +8,4 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\12_MVVM_concept_business_logic\12_MVVM_concept_business_logic.csproj" />
-  </ItemGroup>
-
 </Project>

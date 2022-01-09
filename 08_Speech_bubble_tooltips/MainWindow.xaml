@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:_08_Speech_bubble_tooltips"
         xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
         mc:Ignorable="d"
-        Title="08_Speech_bubble_tooltips" Height="217" Width="453">
+        Title="08_Speech_bubble_tooltips" Height="217" Width="453" Background="FloralWhite">
 
     <!-- IMPORTANT: for this example add NuGet package "Microsoft.Expression.Drawing" !-->
 
@@ -41,8 +41,8 @@
 
     </Window.Resources>
     <Grid>
-        <Button Content="Hover over this button with your mouse!" 
+        <Button Content="Hover over this button with your mouse and wait a bit!" 
                 ToolTip="Hello, this speech bubble explains something!" 
-                Margin="88,70,0,0" Height="52" VerticalAlignment="Top" HorizontalAlignment="Left" Width="268" />
+                Margin="0,70,0,0" Height="52" VerticalAlignment="Top" HorizontalAlignment="Center" Width="314" />
     </Grid>
 </Window>
