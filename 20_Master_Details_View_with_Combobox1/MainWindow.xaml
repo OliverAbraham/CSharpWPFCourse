@@ -1,0 +1,21 @@
+﻿<Window x:Class="_20_Master_Details_View_with_Combobox1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_20_Master_Details_View_with_Combobox1"
+        mc:Ignorable="d"
+        Title="20_Master_Details_View_with_Combobox1" Height="389" Width="562" FontSize="16" Background="WhiteSmoke"
+        Closing="Window_Closing">
+    <Grid>
+        <Label Content="My data" HorizontalAlignment="Left" Margin="43,66,0,0" VerticalAlignment="Top" Width="84"/>
+        <ComboBox x:Name="comboboxSet" Margin="132,67,109,0" VerticalAlignment="Top" Height="30" 
+            ItemsSource="{Binding Rows}"
+            SelectedItem="{Binding CurrentRow}"
+            DisplayMemberPath="DisplayName"/>
+        <Button Content="+" HorizontalAlignment="Right" Margin="0,66,69,0" VerticalAlignment="Top" Height="31" Width="31" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Top" Padding="2" Click="Button_AddRow_Click"/>
+        <Button Content="-" HorizontalAlignment="Right" Margin="0,66,30,0" VerticalAlignment="Top" Height="31" Width="31" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Top" Padding="2" Click="Button_RemoveRow_Click"/>
+
+        <TextBlock TextWrapping="WrapWithOverflow" Margin="43,0,39,39" Text="This demonstrates how to edit and save a simple list,&#10;using a combobox.&#10;You can add lines with + and remove lines with -&#10;The contents and the selection are saved when you close the app&#10;and restored on the next run." Height="135" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>
