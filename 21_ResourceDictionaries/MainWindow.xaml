@@ -1,0 +1,18 @@
+﻿<Window x:Class="_21_ResourceDictionaries.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_21_ResourceDictionaries"
+        mc:Ignorable="d"
+        Title="21_ResourceDictionaries" Height="183" Width="381">
+    <Grid>
+        <Label Content="These buttons are styled with styles from the resource dictionary" Margin="0,30,0,0" HorizontalAlignment="Left" Width="378" Height="28" VerticalAlignment="Top"></Label>
+        <Label Content="Look into ResourceDictionary.xaml and App.xaml !" Margin="0,50,0,0" HorizontalAlignment="Left" Width="378" Height="28" VerticalAlignment="Top"></Label>
+        <StackPanel Orientation="Horizontal" Margin="0,78,0,0" Height="69" VerticalAlignment="Top" HorizontalAlignment="Left" Width="325">
+            <Button Content="Button1" Style="{StaticResource StandardButton}"/>
+            <Button Content="Button2" Style="{StaticResource StandardButton}"/>
+            <Button Content="Button3" Style="{StaticResource DefaultButton}"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -48,7 +48,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "18_TicTacToe", "18_TicTacTo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "19_Canvas_and_graphics", "19_Canvas_and_graphics\19_Canvas_and_graphics.csproj", "{587A801D-3CF4-4CB6-9903-B899300A1C54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20_Master_Details_View_with_Combobox1", "20_Master_Details_View_with_Combobox1\20_Master_Details_View_with_Combobox1.csproj", "{27EC764D-454A-4802-9A74-49DEE452A094}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "20_Master_Details_View_with_Combobox1", "20_Master_Details_View_with_Combobox1\20_Master_Details_View_with_Combobox1.csproj", "{27EC764D-454A-4802-9A74-49DEE452A094}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21_ResourceDictionaries", "21_ResourceDictionaries\21_ResourceDictionaries.csproj", "{079F77E7-8AD3-45F1-9923-D84639F5E132}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -140,6 +142,10 @@ Global
 		{27EC764D-454A-4802-9A74-49DEE452A094}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27EC764D-454A-4802-9A74-49DEE452A094}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27EC764D-454A-4802-9A74-49DEE452A094}.Release|Any CPU.Build.0 = Release|Any CPU
+		{079F77E7-8AD3-45F1-9923-D84639F5E132}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{079F77E7-8AD3-45F1-9923-D84639F5E132}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{079F77E7-8AD3-45F1-9923-D84639F5E132}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{079F77E7-8AD3-45F1-9923-D84639F5E132}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
