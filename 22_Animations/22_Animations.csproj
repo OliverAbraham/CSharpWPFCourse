@@ -8,4 +8,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Gear-0.7s-100px.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Gear-0.7s-100px.png" />
+  </ItemGroup>
+
 </Project>

@@ -4,8 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_22_Animations"
+        xmlns:ui="clr-namespace:UIPack"
         mc:Ignorable="d"
-        Title="22_Animations" Height="430" Width="598" FontSize="16">
+        Title="22_Animations" Height="626" Width="598" FontSize="16">
 
     <Window.Resources>
         <Style x:Key="ButtonMouseOverStyle" TargetType="{x:Type Button}">
@@ -36,6 +37,31 @@
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+
+        <Style x:Key="BusyImage" TargetType="{x:Type Image}">
+            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <RotateTransform Angle="0"/>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="true">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard Timeline.DesiredFrameRate="12">
+                                <DoubleAnimation
+                                    Storyboard.TargetProperty="RenderTransform.Angle"
+                                    From="0" To="360" Duration="0:0:1"
+                                    RepeatBehavior="Forever" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
     </Window.Resources>
 
     <Window.Triggers>
@@ -62,6 +88,7 @@
             </StackPanel>
 
 
+            
             <Label Content="These labels are animated with a storyboard on mouse over" Height="32" VerticalAlignment="Top" Margin="0,50,0,0"></Label>
 
             <Border Grid.Column="0" Name="LeftBox" HorizontalAlignment="Left" >
@@ -81,6 +108,21 @@
                     </Grid>
                 </Button>
             </Border>
+
+
+
+
+            <Label Content="This is a busy indicator made by simply rotating an PNG image" Height="32" VerticalAlignment="Top" Margin="0,50,0,0"></Label>
+            <Label Content="Go to loading.io and download a pleasant PNG for you" Height="32" VerticalAlignment="Top" Margin="0,0,0,0"></Label>
+
+            <Image Width="80" Height="80" Source="Gear-0.7s-100px.png" Style="{StaticResource BusyImage}"/>
+
+
+
+
+            <Label Content="This is a busy indicator as a UserControl" Height="32" VerticalAlignment="Top" Margin="0,50,0,0"></Label>
+
+            <ui:BusyIndicatorControl Text="" IsEnabled="True" Width="80" Height="80"/>
 
         </StackPanel>
     </Grid>

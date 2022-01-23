@@ -1,0 +1,81 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:UIPack" mc:Ignorable="d"
+    x:Class="UIPack.BusyIndicatorControl"
+    x:Name="UserControl" IsEnabled="False">
+        <UserControl.Resources>
+
+            <local:TextToVisibilityConverter x:Key="TextToVisibilityConverter"/>
+
+            <Style x:Key="BusyImage" TargetType="{x:Type Image}">
+                <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+                <Setter Property="RenderTransform">
+                    <Setter.Value>
+                        <RotateTransform Angle="0"/>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsEnabled" Value="true">
+                        <Trigger.EnterActions>
+                            <BeginStoryboard>
+                                <Storyboard Timeline.DesiredFrameRate="12">
+                                    <DoubleAnimation
+                                    Storyboard.TargetProperty="RenderTransform.Angle"
+                                    From="0" To="360" Duration="0:0:1"
+                                    RepeatBehavior="Forever" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </Trigger.EnterActions>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="MyStackPanelStyle" TargetType="{x:Type StackPanel}">
+                <Style.Resources>
+                    <Storyboard x:Key="Show">
+                        <ObjectAnimationUsingKeyFrames
+                        Storyboard.TargetProperty="(UIElement.Visibility)"
+                        Storyboard.TargetName="{x:Null}">
+                            <DiscreteObjectKeyFrame KeyTime="0:0:0.3"
+                            Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                    <Storyboard x:Key="Hide">
+                        <ObjectAnimationUsingKeyFrames
+                        Storyboard.TargetProperty="(UIElement.Visibility)"
+                        Storyboard.TargetName="{x:Null}">
+                            <DiscreteObjectKeyFrame KeyTime="0:0:0"
+                            Value="{x:Static Visibility.Collapsed}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </Style.Resources>
+                <Style.Triggers>
+                    <Trigger Property="IsEnabled" Value="True">
+                        <Trigger.ExitActions>
+                            <BeginStoryboard Storyboard="{StaticResource Hide}"/>
+                        </Trigger.ExitActions>
+                        <Trigger.EnterActions>
+                            <BeginStoryboard Storyboard="{StaticResource Show}"/>
+                        </Trigger.EnterActions>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+        </UserControl.Resources>
+
+        <Grid x:Name="LayoutRoot">
+            <StackPanel Orientation="Horizontal" IsEnabled="{Binding IsEnabled, ElementName=UserControl}" Style="{DynamicResource MyStackPanelStyle}" Visibility="Collapsed">
+                <Image Source="Gear-0.7s-100px.png" Style="{DynamicResource BusyImage}" MaxWidth="80" MaxHeight="80"/>
+                <TextBlock x:Name="textBlock" TextWrapping="Wrap" Margin="5,0,0,0"
+                            Foreground="{Binding Foreground, ElementName=UserControl, Mode=OneWay}"
+                            Text="{Binding Text, ElementName=UserControl, Mode=OneWay}"
+                            Visibility="{Binding Text,
+                            Converter={StaticResource TextToVisibilityConverter},
+                            ElementName=UserControl, Mode=OneWay}"/>
+            </StackPanel>
+        </Grid>
+
+    </UserControl>
