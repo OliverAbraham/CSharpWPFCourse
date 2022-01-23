@@ -10,10 +10,12 @@
 
   <ItemGroup>
     <None Remove="Gear-0.7s-100px.png" />
+    <None Remove="Spinner-1s-200px.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Gear-0.7s-100px.png" />
+    <Resource Include="Spinner-1s-200px.png" />
   </ItemGroup>
 
 </Project>
