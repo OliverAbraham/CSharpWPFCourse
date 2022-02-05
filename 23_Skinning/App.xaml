@@ -1,0 +1,18 @@
+﻿<Application x:Class="_23_Skinning.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:_23_Skinning"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                
+                <local:SkinResourceDictionary LightThemeSource="LightTheme.xaml" DarkThemeSource="DarkTheme.xaml" />
+                <ResourceDictionary Source="GeneralStyles.xaml"/>
+                
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>
