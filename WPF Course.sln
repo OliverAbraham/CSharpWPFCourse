@@ -54,7 +54,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "21_ResourceDictionaries", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "22_Animations", "22_Animations\22_Animations.csproj", "{80217DF9-BF92-4724-AC9B-49A930CB223B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "23_Skinning", "23_Skinning\23_Skinning.csproj", "{23AB52C7-B549-4587-97EA-9C166E5C18B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "23_Skinning", "23_Skinning\23_Skinning.csproj", "{23AB52C7-B549-4587-97EA-9C166E5C18B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElevateWithButton", "24 ElevateWithButton\ElevateWithButton.csproj", "{9DE22A3D-F76F-4D4E-831E-BA83B4EAEEEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -158,6 +160,10 @@ Global
 		{23AB52C7-B549-4587-97EA-9C166E5C18B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23AB52C7-B549-4587-97EA-9C166E5C18B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23AB52C7-B549-4587-97EA-9C166E5C18B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DE22A3D-F76F-4D4E-831E-BA83B4EAEEEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DE22A3D-F76F-4D4E-831E-BA83B4EAEEEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DE22A3D-F76F-4D4E-831E-BA83B4EAEEEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DE22A3D-F76F-4D4E-831E-BA83B4EAEEEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
