@@ -5,20 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_01_Grids"
         mc:Ignorable="d"
-        Title="01_Grids" Height="450" Width="800">
+        Title="Shows how to use grids to create regions in your app UI. You can pick the red separators" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="60"  />
-            <ColumnDefinition Width="2"   />
+            <ColumnDefinition Width="5"   />
             <ColumnDefinition Width="200" />
-            <ColumnDefinition Width="2"   />
+            <ColumnDefinition Width="5"   />
             <ColumnDefinition Width="*"   />
         </Grid.ColumnDefinitions>
 
         <Grid           Grid.Column="0"                                         Background="AliceBlue"></Grid>
-        <GridSplitter   Grid.Column="1" Width="2" HorizontalAlignment="Stretch" Background="Red"/>
+        <GridSplitter   Grid.Column="1" Width="5" HorizontalAlignment="Stretch" Background="Red"/>
         <Grid           Grid.Column="2"                                         Background="LightBlue"></Grid>
-        <GridSplitter   Grid.Column="3" Width="2" HorizontalAlignment="Stretch" Background="Red"/>
+        <GridSplitter   Grid.Column="3" Width="5" HorizontalAlignment="Stretch" Background="Red"/>
         <Grid           Grid.Column="4"                                         Background="LightGray"></Grid>
 
     </Grid>

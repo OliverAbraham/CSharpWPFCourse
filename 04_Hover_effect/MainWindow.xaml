@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_04_Hover_effect"
         mc:Ignorable="d"
-        Title="04_Hover_effect" Height="450" Width="800">
+        Title="How to change control properties when the user hovers over them with the mouse" Height="450" Width="800">
     <Window.Resources>
         <Style x:Key="ImageHoverStyle" TargetType="{x:Type Image}">
             <Style.Triggers>

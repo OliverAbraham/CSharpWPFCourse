@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_14_Animations"
         mc:Ignorable="d"
-        Title="14_Animations" Height="415" Width="696" FontSize="16" Background="FloralWhite">
+        Title="How to make controls visible/unvisible smoothly" Height="415" Width="696" FontSize="16" Background="FloralWhite">
     <Grid>
         <Label Name="MyControl" Content="This is my label" FontSize="80" HorizontalAlignment="Left" Margin="66,126,0,0" VerticalAlignment="Top" Height="115" Width="624"/>
         <Button Content="Fade out" HorizontalAlignment="Left" Margin="200,294,0,0" VerticalAlignment="Top" Width="91" Click="Button_FadeOut_Click" Height="37"/>

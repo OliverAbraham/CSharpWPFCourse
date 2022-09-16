@@ -6,10 +6,10 @@ This repository contains several demo programs from my WPF course.
 	• Shows how to use grids to create regions in your app UI
 
 ## StackPanels
-	• Align controls horizontally or vertically
+	• Align controls horizontally or vertically using the StackPanel
 
 ## Menus and images
-	• Create a simple Menu bar with icons instead of text.
+	• Creating a simple menu bar with icons instead of text.
 
 ## Hover effect
 	• How to change control properties when the user hovers over them with the mouse. 

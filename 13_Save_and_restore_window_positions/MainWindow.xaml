@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_13_Save_and_restore_window_positions"
         mc:Ignorable="d"
-        Title="13_Save_and_restore_window_positions" 
+        Title="Save the positions and sizes of controls, to restore the users choices on the next run." 
         Height="175" Width="530" FontSize="16" Background="FloralWhite"
         Closing="Window_Closing">
     <Grid>

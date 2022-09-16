@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_07_Data_grids_for_editing"
         mc:Ignorable="d"
-        Title="07_Data_grids_for_editing" Height="450" Width="800">
+        Title="Editing grid cells, to save the details window" Height="450" Width="800">
     <Window.Resources>
         <local:ImageConverter x:Key="ImageConverter" />
     </Window.Resources>

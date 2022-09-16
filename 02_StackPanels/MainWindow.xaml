@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_02_StackPanels"
         mc:Ignorable="d"
-        Title="02_StackPanels" Height="637" Width="800">
+        Title="Align controls horizontally or vertically with StackPanels" Height="637" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="60"  />

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_15_Timers"
         mc:Ignorable="d"
-        Title="15_Timers" Height="450" Width="800" FontSize="16" Background="FloralWhite">
+        Title="Use timers to make automatic UI changes" Height="450" Width="800" FontSize="16" Background="FloralWhite">
     <Grid>
         <Ellipse Name="Elli1" HorizontalAlignment="Left" Height="183" Margin="103,34,0,0" Stroke="Black" VerticalAlignment="Top" Width="320"/>
         <Ellipse Name="Elli2" HorizontalAlignment="Left" Height="187" Margin="423,56,0,0" Stroke="Black" VerticalAlignment="Top" Width="273"/>

@@ -5,12 +5,12 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-namespace _26_Graphics_moving_with_mouse
+namespace _27_MoreGraphics
 {
     public partial class MainWindow : Window
     {
-        private List<Shape> _shapes = new List<Shape>();
-        private Shape? _currentMovedShape;
+        private List<MyShapeData> _shapes = new List<MyShapeData>();
+        private MyShapeData? _currentMovedShape;
 
         public MainWindow()
         {
@@ -71,40 +71,51 @@ namespace _26_Graphics_moving_with_mouse
 
         private void AddToCanvasAt(Shape shape, double x, double y)
         {
-            _shapes.Add(shape);
-            myCanvas.Children.Add(shape);
-            Canvas.SetLeft(shape, x);
-            Canvas.SetTop (shape, y);
+            var data = new MyShapeData(shape, x, y);
+            _shapes.Add(data);
+            myCanvas.Children.Add(data.Shape);
+            Canvas.SetLeft(shape, data.X);
+            Canvas.SetTop (shape, data.Y);
         }
 
-        private void MoveShapeTo(Shape shape, double x, double y)
+        private void MoveShapeTo(MyShapeData shape, double x, double y)
         {
-            Canvas.SetLeft(shape, x);
-            Canvas.SetTop (shape, y);
+            shape.X = x; 
+            shape.Y = y;
+            Canvas.SetLeft(shape.Shape, shape.X);
+            Canvas.SetTop (shape.Shape, shape.Y);
         }
 
         private void myCanvas_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            var x = e.GetPosition(myCanvas).X;
-            var y = e.GetPosition(myCanvas).Y;
-            _currentMovedShape = FindShapeUnderMouseCursor(x,y);
-            //System.Diagnostics.Debug.WriteLine("button down");
+            var pos = e.GetPosition(myCanvas);
+            _currentMovedShape = FindShapeUnderMouseCursor(pos.X, pos.Y);
+            CalculateMouseOffsetRelativeToCanvas(_currentMovedShape, pos);
+        }
+
+        private void CalculateMouseOffsetRelativeToCanvas(MyShapeData shape, Point pos)
+        {
+            // this calculate where the shape was "picked" by the mouse pointer
+            shape.OffsetX = pos.X - shape.X;
+            shape.OffsetY = pos.Y - shape.Y;
         }
 
         private void myCanvas_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             _currentMovedShape = null;
-            //System.Diagnostics.Debug.WriteLine("button up");
         }
 
         private void myCanvas_MouseMove(object sender, MouseEventArgs e)
         {
             if (_currentMovedShape == null)
                 return;
-            var x = e.GetPosition(myCanvas).X;
-            var y = e.GetPosition(myCanvas).Y;
-            MoveShapeTo(_currentMovedShape, x,y);
-            //System.Diagnostics.Debug.WriteLine($"moving to {x} {y}");
+            var pos = e.GetPosition(myCanvas);
+            MoveShapeToPostionWithOffset(_currentMovedShape, pos);
+        }
+
+        private void MoveShapeToPostionWithOffset(MyShapeData shape, Point pos)
+        {
+            MoveShapeTo(shape, pos.X - shape.OffsetX, pos.Y - shape.OffsetY);
         }
 
         private void myCanvas_MouseLeave(object sender, MouseEventArgs e)
@@ -112,12 +123,12 @@ namespace _26_Graphics_moving_with_mouse
             myCanvas_MouseLeftButtonUp(null,null);
         }
 
-        private Shape FindShapeUnderMouseCursor(double x, double y)
+        private MyShapeData FindShapeUnderMouseCursor(double x, double y)
         {
             foreach(var shape in _shapes)
             {
                 var element = myCanvas.InputHitTest(new Point(x,y));
-                if (element == shape)
+                if (element == shape.Shape)
                     return shape;
             }
             return null;

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_03_Menues_and_images"
         mc:Ignorable="d"
-        Title="03_Menues_and_images" Height="450" Width="800">
+        Title="Creating a simple menu bar with icons instead of text" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="60"  />

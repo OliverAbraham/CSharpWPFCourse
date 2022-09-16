@@ -24,6 +24,8 @@ namespace _10_Data_grid_with_observable_collection
 
 		private void Button_Click(object sender, RoutedEventArgs e)
         {
+			// The "trick" here is that you only add items to the collection.
+			// The data grid updates automatically.
             Persons.Add(new Person() { ID = 3, Name = "Batman", Birthday = new DateTime(2960, 2, 3) });
         }
 	}

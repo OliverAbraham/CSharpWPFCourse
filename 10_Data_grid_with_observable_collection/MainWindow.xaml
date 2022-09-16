@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_10_Data_grid_with_observable_collection"
         mc:Ignorable="d"
-        Title="10_Data_grid_with_observable_collection" Height="338" Width="499" FontSize="16" Background="FloralWhite">
+        Title="Updating a data grid automatically when the ItemSource changes" Height="338" Width="499" FontSize="16" Background="FloralWhite">
     <Grid>
         <DataGrid HorizontalAlignment="Center" Height="177" Margin="0,42,0,0" VerticalAlignment="Top" Width="362" AutoGenerateColumns="False"
                   ItemsSource="{Binding Persons}">
