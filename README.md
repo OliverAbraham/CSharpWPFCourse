@@ -77,3 +77,19 @@ This repository contains several demo programs from my WPF course.
 	• How to change the look and feel of your app dynamically at runtime.
 	• Shows a simple app with a "light" and a "dark" theme
 	• Precompiled, fixed themes (not dynamically loaded skins)
+
+## Transformations
+	• How to rotate controls with transformations
+	• Creating a kind of "round table" with plates
+
+## Simple graphics
+	• How to draw primitive graphic elements
+
+## Graphics moving with mouse
+	• How to pick a shape with the mouse and drag it
+
+## More Graphics
+	• Improved version of drag and drop
+
+## Elevate with button
+	• Shows how to aquire elevated rights from the operating system and restart the process with more rights

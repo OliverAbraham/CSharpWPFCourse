@@ -1,8 +1,7 @@
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace hackman3vilGuy.CodeProject.VistaSecurity.ElevateWithButton
+namespace ElevateWithButton
 {
     static class Program
     {

@@ -1,12 +1,10 @@
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 using System.Windows.Forms;
 using System.Security.Principal;
 
-namespace hackman3vilGuy.CodeProject.VistaSecurity.ElevateWithButton
+namespace ElevateWithButton
 {
     public static class VistaSecurity
     {

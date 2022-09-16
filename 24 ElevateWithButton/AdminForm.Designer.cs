@@ -1,4 +1,4 @@
-namespace hackman3vilGuy.CodeProject.VistaSecurity.ElevateWithButton
+namespace ElevateWithButton
 {
     partial class AdminForm
     {
@@ -35,32 +35,35 @@ namespace hackman3vilGuy.CodeProject.VistaSecurity.ElevateWithButton
             // buttonGetElevation
             // 
             this.buttonGetElevation.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buttonGetElevation.Location = new System.Drawing.Point(12, 12);
+            this.buttonGetElevation.Location = new System.Drawing.Point(133, 152);
+            this.buttonGetElevation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonGetElevation.Name = "buttonGetElevation";
-            this.buttonGetElevation.Size = new System.Drawing.Size(155, 53);
+            this.buttonGetElevation.Size = new System.Drawing.Size(394, 82);
             this.buttonGetElevation.TabIndex = 0;
-            this.buttonGetElevation.Text = "Do Admin Task";
+            this.buttonGetElevation.Text = "Request elevated rights from the operating system";
             this.buttonGetElevation.UseVisualStyleBackColor = true;
             this.buttonGetElevation.Click += new System.EventHandler(this.buttonGetElevation_Click);
             // 
             // buttonNoElevation
             // 
-            this.buttonNoElevation.Location = new System.Drawing.Point(13, 72);
+            this.buttonNoElevation.Location = new System.Drawing.Point(133, 54);
+            this.buttonNoElevation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonNoElevation.Name = "buttonNoElevation";
-            this.buttonNoElevation.Size = new System.Drawing.Size(154, 33);
+            this.buttonNoElevation.Size = new System.Drawing.Size(394, 51);
             this.buttonNoElevation.TabIndex = 1;
-            this.buttonNoElevation.Text = "Try Admin Task";
+            this.buttonNoElevation.Text = "Try todo a task that requires Admin rights";
             this.buttonNoElevation.UseVisualStyleBackColor = true;
             this.buttonNoElevation.Click += new System.EventHandler(this.buttonNoElevation_Click);
             // 
             // AdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(183, 116);
+            this.ClientSize = new System.Drawing.Size(636, 315);
             this.Controls.Add(this.buttonNoElevation);
             this.Controls.Add(this.buttonGetElevation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AdminForm";
             this.Text = "Admin Form";
             this.ResumeLayout(false);

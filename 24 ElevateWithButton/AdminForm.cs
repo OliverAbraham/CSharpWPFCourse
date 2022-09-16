@@ -1,12 +1,7 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
-namespace hackman3vilGuy.CodeProject.VistaSecurity.ElevateWithButton
+namespace ElevateWithButton
 {
     public partial class AdminForm : Form
     {
@@ -39,17 +34,16 @@ namespace hackman3vilGuy.CodeProject.VistaSecurity.ElevateWithButton
         {
             try
             {
-                string fName = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData)
-                    + @"\Microsoft\Windows\Start Menu\VISTA.TXT";
-                if (System.IO.File.Exists(fName))
+                string filename = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + @"\NEW FILE.TXT";
+                if (System.IO.File.Exists(filename))
                 {
-                    System.IO.File.Delete(fName);
-                    MessageBox.Show("VISTA.TXT deleted");
+                    System.IO.File.Delete(filename);
+                    MessageBox.Show("NEW FILE deleted");
                 }
                 else
                 {
-                    System.IO.File.Create(fName).Close();
-                    MessageBox.Show("VISTA.TXT created");
+                    System.IO.File.Create(filename).Close();
+                    MessageBox.Show("NEW FILE created");
                 }
             }
             catch (UnauthorizedAccessException uacEx)

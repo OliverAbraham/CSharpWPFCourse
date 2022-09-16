@@ -7,8 +7,8 @@
     <ProjectGuid>{9DE22A3D-F76F-4D4E-831E-BA83B4EAEEEF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>hackman3vilGuy.CodeProject.VistaSecurity.ElevateWithButton</RootNamespace>
-    <AssemblyName>hackman3vilGuy.CodeProject.VistaSecurity.ElevateWithButton</AssemblyName>
+    <RootNamespace>ElevateWithButton</RootNamespace>
+    <AssemblyName>ElevateWithButton</AssemblyName>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>

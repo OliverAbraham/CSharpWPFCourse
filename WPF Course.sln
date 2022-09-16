@@ -56,13 +56,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "22_Animations", "22_Animati
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "23_Skinning", "23_Skinning\23_Skinning.csproj", "{23AB52C7-B549-4587-97EA-9C166E5C18B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElevateWithButton", "24 ElevateWithButton\ElevateWithButton.csproj", "{9DE22A3D-F76F-4D4E-831E-BA83B4EAEEEF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "28_ElevateWithButton", "24 ElevateWithButton\28_ElevateWithButton.csproj", "{9DE22A3D-F76F-4D4E-831E-BA83B4EAEEEF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "25_Simple_graphics", "25_Simple_graphics\25_Simple_graphics.csproj", "{0439C476-78C7-4E0E-B140-5C67143EEC51}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "26_Graphics_moving_with_mouse", "26_Graphics_moving_with_mouse\26_Graphics_moving_with_mouse.csproj", "{B3DCFD3F-4BF6-45AE-9648-A4E517A9E868}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "27_MoreGraphics", "27_MoreGraphics\27_MoreGraphics.csproj", "{B83837DD-4935-4D1B-B53E-2FE15DD56B84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24_Rotating_controls_using_transformations", "24_Rotating_controls_using_transformations\24_Rotating_controls_using_transformations.csproj", "{DE3E415C-1F00-40C1-9DA9-658F352D9ABD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -182,6 +184,10 @@ Global
 		{B83837DD-4935-4D1B-B53E-2FE15DD56B84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B83837DD-4935-4D1B-B53E-2FE15DD56B84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B83837DD-4935-4D1B-B53E-2FE15DD56B84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE3E415C-1F00-40C1-9DA9-658F352D9ABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE3E415C-1F00-40C1-9DA9-658F352D9ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE3E415C-1F00-40C1-9DA9-658F352D9ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE3E415C-1F00-40C1-9DA9-658F352D9ABD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
