@@ -16,23 +16,19 @@ using System.Windows.Threading;
 
 namespace _19_Canvas_and_graphics
 {
-	/// <summary>
-	/// Interaction logic for MainWindow.xaml
-	/// </summary>
 	public partial class MainWindow : Window
 	{
-		private double _x;
-		private double _y;
-		private double _ballSize = 30;
+		private double          _x;
+		private double          _y;
+		private double          _ballSize = 30;
 		private DispatcherTimer _timer;
-		private Ellipse _ball;
-		private bool _moveRight = true;
-		private bool _moveDown = true;
+		private Ellipse         _ball;
+		private bool            _moveRight = true;
+		private bool            _moveDown  = true;
 
 		public MainWindow()
 		{
 			InitializeComponent();
-
 			AddBallToCanvas();
 			StartTimer();
 		}
@@ -54,7 +50,7 @@ namespace _19_Canvas_and_graphics
 
 		private void MoveBall()
 		{
-			if (_moveDown) _y++; else _y--;
+			if (_moveDown ) _y++; else _y--;
 			if (_moveRight) _x++; else _x--;
 		}
 
@@ -80,7 +76,7 @@ namespace _19_Canvas_and_graphics
 		private void SetBallPosition()
 		{
 			Canvas.SetLeft(_ball, _x);
-			Canvas.SetTop(_ball, _y);
+			Canvas.SetTop (_ball, _y);
 		}
 	}
 }

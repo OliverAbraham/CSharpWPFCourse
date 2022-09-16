@@ -58,6 +58,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "23_Skinning", "23_Skinning\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElevateWithButton", "24 ElevateWithButton\ElevateWithButton.csproj", "{9DE22A3D-F76F-4D4E-831E-BA83B4EAEEEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "25_Simple_graphics", "25_Simple_graphics\25_Simple_graphics.csproj", "{0439C476-78C7-4E0E-B140-5C67143EEC51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "26_Graphics_moving_with_mouse", "26_Graphics_moving_with_mouse\26_Graphics_moving_with_mouse.csproj", "{B3DCFD3F-4BF6-45AE-9648-A4E517A9E868}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -164,6 +168,14 @@ Global
 		{9DE22A3D-F76F-4D4E-831E-BA83B4EAEEEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DE22A3D-F76F-4D4E-831E-BA83B4EAEEEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DE22A3D-F76F-4D4E-831E-BA83B4EAEEEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0439C476-78C7-4E0E-B140-5C67143EEC51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0439C476-78C7-4E0E-B140-5C67143EEC51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0439C476-78C7-4E0E-B140-5C67143EEC51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0439C476-78C7-4E0E-B140-5C67143EEC51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3DCFD3F-4BF6-45AE-9648-A4E517A9E868}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3DCFD3F-4BF6-45AE-9648-A4E517A9E868}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3DCFD3F-4BF6-45AE-9648-A4E517A9E868}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3DCFD3F-4BF6-45AE-9648-A4E517A9E868}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
