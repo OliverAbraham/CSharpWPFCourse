@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
 
-namespace _10_Data_grid_with_observable_collection
+namespace _03_Data_grid_error_handling
 {
-	public partial class MainWindow : Window
-	{
+    public partial class MainWindow : Window
+    {
         public List<string> Countries { get; set; }
         public ObservableCollection<Person> Persons { get; set; }
 
@@ -20,16 +22,6 @@ namespace _10_Data_grid_with_observable_collection
 			DataContext = this;
 		}
 
-		private void Button_ChangeLastNameOfAllItems_Click(object sender, RoutedEventArgs e)
-        {
-			// The "trick" here is that you only add items to the collection. The data grid updates automatically.
-			foreach(var person in Persons) 
-			{
-				person.LastName += "X";
-				person.NotifyPropertyChanged(nameof(Person.LastName));
-			}
-        }
-
 		// Generate a "primary key", a unique number for new rows
 		private void DataGrid_InitializingNewItem(object sender, System.Windows.Controls.InitializingNewItemEventArgs e)
 		{
@@ -38,5 +30,19 @@ namespace _10_Data_grid_with_observable_collection
 			newItem.Birthday = DateTime.Parse("01.01.2000");
 			newItem.Gender = "Neutral";
         }
-	}
+    }
+
+    // IMPORTANT: This is the validator that is called by DataGrid after every row edit
+    public class PersonValidationRule : ValidationRule
+    {
+        public override ValidationResult Validate(object value, System.Globalization.CultureInfo cultureInfo)
+        {
+            Person? person = (Person)((value as BindingGroup).Items[0]);
+            if (person is null)
+                return ValidationResult.ValidResult;
+            if (person.Birthday > DateTime.Now)
+                return new ValidationResult(false,"Birthday cannot be in future!");
+            return ValidationResult.ValidResult;
+        }
+    }
 }

@@ -1,0 +1,62 @@
+﻿<Window x:Class="_03_Data_grid_error_handling.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_03_Data_grid_error_handling"
+        mc:Ignorable="d"
+        Title="Data grid error handling" Height="324" Width="800" FontSize="16" Background="FloralWhite">
+    <Grid>
+        <DataGrid HorizontalAlignment="Center" Height="177" Margin="0,42,0,0" VerticalAlignment="Top" Width="674" AutoGenerateColumns="False"
+                  ItemsSource="{Binding Persons}"
+                  InitializingNewItem="DataGrid_InitializingNewItem">
+
+            <!-- IMPORTANT: This sets a pretty style for the error text that appears when you hover over the error icon -->
+            <DataGrid.Resources>
+                <Style x:Key="errorStyle" TargetType="{x:Type TextBox}">
+                    <Setter Property="Padding" Value="-2"/>
+                    <Style.Triggers>
+                        <Trigger Property="Validation.HasError" Value="True">
+                            <Setter Property="Background" Value="Red"/>
+                            <Setter Property="ToolTip" 
+                                Value="{Binding RelativeSource={RelativeSource Self},
+                                Path=(Validation.Errors)[0].ErrorContent}"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.Resources>
+
+            <!-- IMPORTANT: This sets a pretty style for the error indicator -->
+            <DataGrid.RowValidationErrorTemplate>
+                <ControlTemplate>
+                    <Grid Margin="0,-2,0,-2"
+                          ToolTip="{Binding RelativeSource={RelativeSource
+                          FindAncestor, AncestorType={x:Type DataGridRow}},
+                          Path=(Validation.Errors)[0].ErrorContent}">
+                        <Ellipse StrokeThickness="0" Fill="Red" Width="{TemplateBinding FontSize}" Height="{TemplateBinding FontSize}" />
+                        <TextBlock Text="!" FontSize="{TemplateBinding FontSize}" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </DataGrid.RowValidationErrorTemplate>
+
+            <!-- IMPORTANT: This sets the class in your code that should be called for row validation -->
+            <DataGrid.RowValidationRules>
+                <local:PersonValidationRule ValidationStep="UpdatedValue"/>
+            </DataGrid.RowValidationRules>
+
+            
+            
+            
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="No."            Binding="{Binding ID,Mode=TwoWay}" />
+                <DataGridTextColumn Header="First name"     Binding="{Binding FirstName, Mode=TwoWay}" Width="100"/>
+                <DataGridTextColumn Header="Last name"      Binding="{Binding LastName , Mode=TwoWay}" Width="100"/>
+
+                <!-- IMPORTANT: ValidatesOnExceptions=True tells the datagrid that our validator throws exceptions in case of bad entries -->
+                <DataGridTextColumn Header="Birthday"       Binding="{Binding Birthday , StringFormat='dd.MM.yyyy',Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True}" />
+                <DataGridTextColumn Header="Musician"       Binding="{Binding Musician , Mode=TwoWay}" Width="100"/>
+                <DataGridTextColumn Header="Gender"         Binding="{Binding Gender   , Mode=TwoWay}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

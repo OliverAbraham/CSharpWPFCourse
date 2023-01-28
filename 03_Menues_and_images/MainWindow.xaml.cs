@@ -8,5 +8,10 @@ namespace _03_Menues_and_images
 		{
 			InitializeComponent();
 		}
-	}
+
+        private void Image_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+			MessageBox.Show("First Icon was selected!");
+        }
+    }
 }

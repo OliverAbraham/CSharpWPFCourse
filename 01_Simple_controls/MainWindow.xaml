@@ -1,0 +1,59 @@
+﻿<Window x:Class="_01_Simple_controls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_01_Simple_controls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="612" Width="800" FontSize="16" Background="WhiteSmoke">
+    <Grid Margin="20">
+        <StackPanel Orientation="Vertical">
+            <WrapPanel Orientation="Horizontal">
+                <Label          Content="First name"                                                Margin="0,20,0,0" MinWidth="100"/>
+                <TextBox        Text="{Binding CurrentPerson.FirstName}"                            Margin="0,25,0,0" MinWidth="100" Padding="4,0,0,0" />
+            </WrapPanel>
+
+            <WrapPanel Orientation="Horizontal">
+                <Label          Content="Last name"                                                 Margin="0,20,0,0" MinWidth="100"/>
+                <TextBox        Text="{Binding CurrentPerson.LastName}"                             Margin="0,25,0,0" MinWidth="100"/>
+            </WrapPanel>
+
+            <WrapPanel Orientation="Horizontal">
+                <Label          Content="Birthday"                                                  Margin="0,20,0,0" MinWidth="100"/>
+                <TextBox        Text="{Binding CurrentPerson.Birthday, StringFormat='dd.MM.yyyy',Mode=TwoWay}"    Margin="0,25,0,0" MinWidth="100" Padding="4,0,0,0" />
+            </WrapPanel>
+
+            <WrapPanel Orientation="Horizontal">
+                <Label          Content="Country"                                                   Margin="0,20,0,0" MinWidth="100"/>
+                <ComboBox       ItemsSource="{Binding Countries}" 
+                                SelectedValue="{Binding CurrentPerson.Country}"                     Margin="0,25,0,0" MinWidth="200"/>
+            </WrapPanel>
+
+            <WrapPanel Orientation="Horizontal">
+                <Label          Content="Skills"                                                    Margin="0,20,0,0" MinWidth="100"/>
+                <CheckBox       Content="Musician" IsChecked="{Binding CurrentPerson.Musician}"     Margin="0,25,0,0" MinWidth="200"/>
+            </WrapPanel>
+
+            <WrapPanel Orientation="Horizontal">
+                <Label          Content="Gender"                                                    Margin="0,20,0,0" MinWidth="100"/>
+                <WrapPanel Orientation="Horizontal" VerticalAlignment="Bottom">
+                    <RadioButton    Content="Male"      Width="80" Height="20" Padding="0,-4,0,0" IsChecked="{Binding CurrentPerson.IsMale}"/>
+                    <RadioButton    Content="Female"    Width="80" Height="20" Padding="0,-4,0,0" IsChecked="{Binding CurrentPerson.IsFemale}"/>
+                    <RadioButton    Content="Neutral"   Width="80" Height="20" Padding="0,-4,0,0" IsChecked="{Binding CurrentPerson.IsNeutral}"/>
+                </WrapPanel>
+            </WrapPanel>
+            
+            <WrapPanel Orientation="Horizontal">
+                <Label          Content="Comments"                                                  Margin="0,20,0,0" MinWidth="100"/>
+                <TextBlock      Text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."                                           
+                                Margin="0,25,0,0" MinWidth="100" MaxWidth="600" MaxHeight="100" TextWrapping="Wrap"/>
+            </WrapPanel>
+
+            <WrapPanel Orientation="Horizontal" Margin="5,50,0,0">
+                <Button Content="Previous data set" Margin="0,0,20,0" Width="200" Click="Button_Previous_Click"></Button>
+                <Button Content="Next data set"     Margin="0,0,20,0" Width="200" Click="Button_Next_Click"></Button>
+            </WrapPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>

@@ -11,19 +11,19 @@ namespace _20_Master_Details_View_with_Combobox1
 {
 	public partial class MainWindow : Window, INotifyPropertyChanged
 	{
-        #region ------------- Properties ----------------------------------------------------------
+        #region ------------- Properties for data binding -----------------------------------------
         public ObservableCollection<MyRow> Rows
 		{
-            get {  return _myComboboxData?.Rows; }
+            get {  return _myData?.Rows; }
             set { }
 		}
 		
         public MyRow CurrentRow
 		{
-            get {  return _myComboboxData?.CurrentRow; }
+            get {  return _myData?.CurrentRow; }
             set 
             { 
-                _myComboboxData.CurrentRow = value; 
+                _myData.CurrentRow = value; 
                 NotifyPropertyChanged(nameof(CurrentRow));
             }
 		}
@@ -32,7 +32,7 @@ namespace _20_Master_Details_View_with_Combobox1
 
 
 		#region ------------- Fields --------------------------------------------------------------
-        private MyComboboxData _myComboboxData;
+        private MyComboboxData _myData;
         private const string FILENAME = "combobox.json";
         #endregion
 
@@ -56,18 +56,18 @@ namespace _20_Master_Details_View_with_Combobox1
 
 
         #region ------------- Implementation  -----------------------------------------------------
-		#region ------------- Managing the combobox -------------------------------
+		#region ------------- Combobox storage -------------------------------
 		private void LoadData()
 		{
 			try
 			{
 				var fileContents = File.ReadAllText(FILENAME);
-				_myComboboxData = JsonConvert.DeserializeObject<MyComboboxData>(fileContents);
+				_myData = JsonConvert.DeserializeObject<MyComboboxData>(fileContents);
 			}
 			catch (Exception)
 			{
 				// this is the initilisation for the first time, when the file doesn't exist
-				_myComboboxData = new MyComboboxData("Default");
+				_myData = new MyComboboxData("Default");
 				SaveData();
 			}
 		}
@@ -76,7 +76,7 @@ namespace _20_Master_Details_View_with_Combobox1
 		{
             try
 			{
-                var fileContents = JsonConvert.SerializeObject(_myComboboxData, Formatting.Indented);
+                var fileContents = JsonConvert.SerializeObject(_myData, Formatting.Indented);
                 File.WriteAllText(FILENAME, fileContents);
 			}
             catch (Exception ex)
@@ -84,12 +84,13 @@ namespace _20_Master_Details_View_with_Combobox1
                 MessageBox.Show($"Error writing to file {FILENAME}:\n{ex.Message}");
 			}
 		}
-
-		private void DisplayData()
+        #endregion
+		#region ------------- Combobox UI -------------------------------------
+        private void DisplayData()
 		{
 			NotifyPropertyChanged(nameof(Rows));
-			_myComboboxData.CurrentRow = _myComboboxData.Rows.FirstOrDefault(x => x.Name == _myComboboxData.CurrentRow.Name);
-			CurrentRow = _myComboboxData.CurrentRow;
+			_myData.CurrentRow = _myData.Rows.FirstOrDefault(x => x.Name == _myData.CurrentRow.Name);
+			CurrentRow = _myData.CurrentRow;
 		}
 
 		private void Button_AddRow_Click(object sender, RoutedEventArgs e)
@@ -102,14 +103,14 @@ namespace _20_Master_Details_View_with_Combobox1
                 return; // user closed the dialog with cancel
             
 			// let the model validate the new row
-            if (!_myComboboxData.Validate(dlg.NewRow, out string errorMessages))
+            if (!_myData.Validate(dlg.NewRow, out string errorMessages))
 			{
                 MessageBox.Show(errorMessages);
                 return;
 			}
 
 			// It's ok, so we can add the new row
-			_myComboboxData.AddNewRow(dlg.NewRow);
+			_myData.AddNewRow(dlg.NewRow);
 			
 			// and we select the new row automatically because we assume the user wants that
             CurrentRow = dlg.NewRow;
@@ -118,13 +119,13 @@ namespace _20_Master_Details_View_with_Combobox1
 
 		private void Button_RemoveRow_Click(object sender, RoutedEventArgs e)
 		{
-            if (!_myComboboxData.CurrentRowCanBeDeleted(out string errorMessages))
+            if (!_myData.CurrentRowCanBeDeleted(out string errorMessages))
 			{
                 MessageBox.Show(errorMessages);
                 return;
 			}
 
-            var result = MessageBox.Show($"Do you really want to delete the row '{_myComboboxData.CurrentRow?.Name}' ?", 
+            var result = MessageBox.Show($"Do you really want to delete the row '{_myData.CurrentRow?.Name}' ?", 
                 "Delete ?", 
                 MessageBoxButton.YesNo, 
                 MessageBoxImage.Question,
@@ -132,14 +133,13 @@ namespace _20_Master_Details_View_with_Combobox1
             if (result != MessageBoxResult.Yes)
                 return;
 
-			_myComboboxData.RemoveRow(_myComboboxData.CurrentRow);
+			_myData.RemoveRow(_myData.CurrentRow);
 
 			// after deletion, select any other row
-            CurrentRow = _myComboboxData.Rows[0];
+            CurrentRow = _myData.Rows[0];
             SaveData();
 		}
 		#endregion
-
 		#region ------------- INotifyPropertyChanged ---------------------------
 		// add "INotifyPropertyChanged" to your class
 		// add "using System.ComponentModel";
@@ -166,7 +166,6 @@ namespace _20_Master_Details_View_with_Combobox1
 				Handler(this, new PropertyChangedEventArgs(propertyName));
 		}
 		#endregion
-
 		#endregion
 	}
 }

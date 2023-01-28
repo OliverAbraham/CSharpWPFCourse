@@ -5,17 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_10_Data_grid_with_observable_collection"
         mc:Ignorable="d"
-        Title="Updating a data grid automatically when the ItemSource changes" Height="338" Width="499" FontSize="16" Background="FloralWhite">
+        Title="Updating a data grid automatically when the ItemSource changes" Height="338" Width="761" FontSize="16" Background="FloralWhite">
     <Grid>
-        <DataGrid HorizontalAlignment="Center" Height="177" Margin="0,42,0,0" VerticalAlignment="Top" Width="362" AutoGenerateColumns="False"
-                  ItemsSource="{Binding Persons}">
+        <DataGrid HorizontalAlignment="Center" Height="177" Margin="0,42,0,0" VerticalAlignment="Top" Width="674" AutoGenerateColumns="False"
+                  ItemsSource="{Binding Persons}"
+                  InitializingNewItem="DataGrid_InitializingNewItem">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="No."            Binding="{Binding ID,Mode=TwoWay}" />
-                <DataGridTextColumn Header="Full name"      Binding="{Binding Name,Mode=TwoWay}" Width="200"/>
-                <DataGridTextColumn Header="Born when?"     Binding="{Binding Birthday, StringFormat='dd.MM.yyyy',Mode=TwoWay}" />
+                <DataGridTextColumn Header="First name"     Binding="{Binding FirstName, Mode=TwoWay}" Width="100"/>
+                <DataGridTextColumn Header="Last name"      Binding="{Binding LastName , Mode=TwoWay}" Width="100"/>
+                <DataGridTextColumn Header="Birthday"       Binding="{Binding Birthday , StringFormat='dd.MM.yyyy',Mode=TwoWay}" />
+                <DataGridTextColumn Header="Musician"       Binding="{Binding Musician , Mode=TwoWay}" Width="100"/>
+                <DataGridTextColumn Header="Gender"         Binding="{Binding Gender   , Mode=TwoWay}" Width="100"/>
             </DataGrid.Columns>
         </DataGrid>
 
-        <Button Content="Add person" HorizontalAlignment="Center" Margin="0,250,0,0" VerticalAlignment="Top" Width="102" Click="Button_Click" Height="34"/>
+        <Button Content="Change last name of all items" HorizontalAlignment="Center" Margin="0,250,0,0" VerticalAlignment="Top" Width="250" Click="Button_ChangeLastNameOfAllItems_Click" Height="34"/>
     </Grid>
 </Window>

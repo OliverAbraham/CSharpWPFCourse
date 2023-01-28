@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_20_Master_Details_View_with_Combobox1"
         mc:Ignorable="d"
-        Title="20_Master_Details_View_with_Combobox1" Height="389" Width="562" FontSize="16" Background="WhiteSmoke"
+        Title="20_Editable_combobox" Height="389" Width="562" FontSize="16" Background="WhiteSmoke"
         Closing="Window_Closing">
     <Grid>
         <Label Content="My data" HorizontalAlignment="Left" Margin="43,66,0,0" VerticalAlignment="Top" Width="84"/>

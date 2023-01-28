@@ -23,7 +23,7 @@
 
             <Grid Name="GridLeftTop" Background="AliceBlue" Grid.Row="0">
                 <StackPanel Orientation="Vertical" HorizontalAlignment="left" Margin="0,0,0,0" Width="60">
-                    <Image Margin="5,10,0,0" Width="40" Source="Resources/Actor.png"></Image>
+                    <Image Margin="5,10,0,0" Width="40" Source="Resources/Actor.png" MouseLeftButtonDown="Image_MouseLeftButtonDown"></Image>
                     <Image Margin="5,20,0,0" Width="40" Source="Resources/DocumentGroup.png"></Image>
                     <Image Margin="5,20,0,0" Width="35" Source="Resources/SettingsGroup.png"></Image>
                     <Image Margin="5,20,0,0" Width="30" Source="Resources/FolderOpened.png"></Image>
