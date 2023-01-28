@@ -135,11 +135,13 @@ to learn more about Alignment, Margins and padding.
 
 
 ## Demo apps
-#### Sample application: text encryption app
+#### Text encryption app
 - Fully functional app
 - Demonstrates how to do text input in two text controls, and filling them vica versa.
+- Demonstrate how to encrypt and decrypt text
+- The user can enter plain text in the upper or encrypted text in the lower entryfield
 
-#### Sample application: Tic Tac Toe
+#### Tic Tac Toe
 - Fully functional app
 - Demonstrates how to do separate the UI from domain logic
 
