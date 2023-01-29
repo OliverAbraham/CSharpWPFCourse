@@ -4,10 +4,9 @@ using System.ComponentModel;
 using System.IO;
 using System.Windows;
 using System.Windows.Threading;
-using WeatherGateway;
-using static WeatherGateway.WeatherGatewayLogic;
+using static _30_WeatherDisplay.WeatherGatewayLogic;
 
-namespace WeatherDisplay
+namespace _30_WeatherDisplay
 {
     public partial class MainWindow : Window, INotifyPropertyChanged
     {

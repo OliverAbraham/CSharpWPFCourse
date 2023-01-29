@@ -6,7 +6,7 @@ using Models;
 using System.Linq;
 using System.IO;
 
-namespace WeatherGateway
+namespace _30_WeatherDisplay
 {
     class WeatherGatewayLogic
     {

@@ -169,3 +169,7 @@ to learn more about Alignment, Margins and padding.
 - Shows how to read and display the current temperature from openweathermap.org
 - Temperature reading is a black box! The focus is on the WPF part.
 - Reading values from the internet is part of my Pro course
+
+#### PasswordGenerator
+- Shows how to generate random passwords
+- How to copy a string to the clipboard

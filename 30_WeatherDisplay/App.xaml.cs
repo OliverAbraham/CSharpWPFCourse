@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace WeatherDisplay
+namespace _30_WeatherDisplay
 {
     /// <summary>
     /// Interaction logic for App.xaml
