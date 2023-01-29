@@ -152,3 +152,8 @@ to learn more about Alignment, Margins and padding.
 
 #### Elevate with button
 - Shows how to aquire elevated rights from the operating system and restart you app with more rights
+
+#### Weather display
+- Shows how to read and display the current temperature from openweathermap.org
+- Temperature reading is a black box! The focus is on the WPF part.
+- Reading values from the internet is part of my Pro course
