@@ -173,3 +173,7 @@ to learn more about Alignment, Margins and padding.
 #### PasswordGenerator
 - Shows how to generate random passwords
 - How to copy a string to the clipboard
+
+#### Notepad with autosave
+- Shows how to build an app that saves all your data automatically
+- You don't need to press save buttons
