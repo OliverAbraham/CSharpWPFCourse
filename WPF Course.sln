@@ -48,7 +48,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "18_TicTacToe", "18_TicTacTo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "19_Canvas_and_graphics", "19_Canvas_and_graphics\19_Canvas_and_graphics.csproj", "{587A801D-3CF4-4CB6-9903-B899300A1C54}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "20_Master_Details_View_with_Combobox1", "20_Master_Details_View_with_Combobox1\20_Master_Details_View_with_Combobox1.csproj", "{27EC764D-454A-4802-9A74-49DEE452A094}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "20_Editable_combobox", "20_Master_Details_View_with_Combobox1\20_Editable_combobox.csproj", "{27EC764D-454A-4802-9A74-49DEE452A094}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "21_ResourceDictionaries", "21_ResourceDictionaries\21_ResourceDictionaries.csproj", "{079F77E7-8AD3-45F1-9923-D84639F5E132}"
 EndProject
