@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>_35_NotepadWithAutosave</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\CharacterGrowFont.png" />
+    <None Remove="Images\CharacterShrinkFont.png" />
+    <None Remove="Images\EditCopy.png" />
+    <None Remove="Images\EditCut.png" />
+    <None Remove="Images\EditPaste.png" />
+    <None Remove="Images\EditRedo.png" />
+    <None Remove="Images\EditUndo.png" />
+    <None Remove="Images\FileOpen.png" />
+    <None Remove="Images\FileSave.png" />
+    <None Remove="Images\ListBullets.png" />
+    <None Remove="Images\ListNumbering.png" />
+    <None Remove="Images\ParagraphCenterJustify.png" />
+    <None Remove="Images\ParagraphDecreaseIndentation.png" />
+    <None Remove="Images\ParagraphFullJustify.png" />
+    <None Remove="Images\ParagraphIncreaseIndentation.png" />
+    <None Remove="Images\ParagraphLeftJustify.png" />
+    <None Remove="Images\ParagraphRightJustify.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Abraham.WPFWindowLayoutManager" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\CharacterGrowFont.png" />
+    <Resource Include="Images\CharacterShrinkFont.png" />
+    <Resource Include="Images\EditCopy.png" />
+    <Resource Include="Images\EditCut.png" />
+    <Resource Include="Images\EditPaste.png" />
+    <Resource Include="Images\EditRedo.png" />
+    <Resource Include="Images\EditUndo.png" />
+    <Resource Include="Images\FileOpen.png" />
+    <Resource Include="Images\FileSave.png" />
+    <Resource Include="Images\ListBullets.png" />
+    <Resource Include="Images\ListNumbering.png" />
+    <Resource Include="Images\ParagraphCenterJustify.png" />
+    <Resource Include="Images\ParagraphDecreaseIndentation.png" />
+    <Resource Include="Images\ParagraphFullJustify.png" />
+    <Resource Include="Images\ParagraphIncreaseIndentation.png" />
+    <Resource Include="Images\ParagraphLeftJustify.png" />
+    <Resource Include="Images\ParagraphRightJustify.png" />
+  </ItemGroup>
+
+</Project>
