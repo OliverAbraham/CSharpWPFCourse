@@ -10,7 +10,7 @@ namespace WeatherGateway
 {
     class WeatherGatewayLogic
     {
-        #region ------------- Properties ---------------------------------------------------------
+        #region ------------- Properties ----------------------------------------------------------
         public Configuration ServerConfiguration { get { return _config; } set { _config = value; } }
         #endregion
 

@@ -11,10 +11,20 @@ namespace WeatherDisplay
 {
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
+        #region ------------- Properties ----------------------------------------------------------
         public string CurrentTemperature { get; set; }
+        #endregion
+
+
+
+        #region ------------- Fields --------------------------------------------------------------
         private WeatherGatewayLogic _logic;
         private string _configurationFile = @"C:\Credentials\WpfCourseWeatherDisplay.json";
+        #endregion
 
+
+
+        #region ------------- Init ----------------------------------------------------------------
         public MainWindow()
         {
             InitializeComponent();
@@ -37,7 +47,16 @@ namespace WeatherDisplay
             _updateTimer.Interval = new TimeSpan(hours: 0, minutes: 1, seconds: 0);
             _updateTimer.Start();
         }
+        #endregion
 
+
+
+        #region ------------- Methods -------------------------------------------------------------
+        #endregion
+
+
+
+        #region ------------- Implementation ------------------------------------------------------
         private void PeriodicUpdate(object sender, EventArgs e)
         {
             try
@@ -83,6 +102,7 @@ namespace WeatherDisplay
                 handler(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        #endregion
         #endregion
     }
 }
