@@ -126,6 +126,18 @@ to learn more about Alignment, Margins and padding.
 
 
 
+## User Controls
+#### 31_Digital clock first try
+- Demonstrates the approach to write a clock with 7 segment digits
+- This is the first take to create and design a single 7 segment display
+
+#### 32_DigitalClock_UserControl
+- This is the WPF user control that we use for the final app
+
+#### 33_DigitalClock_FinalApp
+- This is the final app that uses the user control
+
+
 
 
 ## MVVM

@@ -1,0 +1,25 @@
+﻿<Window x:Class="_33_DigitalClock_FinalApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_33_DigitalClock_FinalApp"
+        mc:Ignorable="d"
+        Title="Digital clock" Background="Black"
+        Height="337" MinHeight="337" MaxHeight="337" 
+        Width="1045" MinWidth="1045" MaxWidth="1590" 
+        
+        xmlns:SegmentControl="clr-namespace:MyControls;assembly=32_DigitalClock_UserControl">
+        <!-- Above is the reference that points to the WPF class library containing our user control -->
+
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <SegmentControl:SegmentDisplay Name="Hour10"   HorizontalAlignment="Stretch" Margin="0,0,0,0"   VerticalAlignment="Stretch" Width="225"/>
+            <SegmentControl:SegmentDisplay Name="Hour1"    HorizontalAlignment="Stretch" Margin="0,0,100,0" VerticalAlignment="Stretch" Width="225"/>
+            <SegmentControl:SegmentDisplay Name="Minute10" HorizontalAlignment="Stretch" Margin="0,0,0,0"   VerticalAlignment="Stretch" Width="225"/>
+            <SegmentControl:SegmentDisplay Name="Minute1"  HorizontalAlignment="Stretch" Margin="0,0,100,0" VerticalAlignment="Stretch" Width="225"/>
+            <SegmentControl:SegmentDisplay Name="Second10" HorizontalAlignment="Stretch" Margin="0,0,0,0"   VerticalAlignment="Stretch" Width="225"/>
+            <SegmentControl:SegmentDisplay Name="Second1"  HorizontalAlignment="Stretch" Margin="0,0,0,0"   VerticalAlignment="Stretch" Width="225"/>
+        </StackPanel>
+    </Grid>
+</Window>
