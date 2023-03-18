@@ -84,17 +84,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "20 Demo apps", "20 Demo app
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 User Controls", "05 User Controls", "{45CEE429-C84C-4483-BBE8-6709277850CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "31_DigitalClock_FirstTry", "31_DigitalClock_FirstTry\31_DigitalClock_FirstTry.csproj", "{5B6BD2E8-8890-46F4-81C9-DF1622D615A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "31_DigitalClock_FirstTry", "31_DigitalClock_FirstTry\31_DigitalClock_FirstTry.csproj", "{5B6BD2E8-8890-46F4-81C9-DF1622D615A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "32_DigitalClock_UserControl", "32_DigitalClock_UserControl\32_DigitalClock_UserControl.csproj", "{B1C02903-D190-443C-A4AB-B2A112C9F913}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "32_DigitalClock_UserControl", "32_DigitalClock_UserControl\32_DigitalClock_UserControl.csproj", "{B1C02903-D190-443C-A4AB-B2A112C9F913}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "33_DigitalClock_FinalApp", "33_DigitalClock_FinalApp\33_DigitalClock_FinalApp.csproj", "{3226E238-AE83-4517-AF2D-0D0785AC6DE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "33_DigitalClock_FinalApp", "33_DigitalClock_FinalApp\33_DigitalClock_FinalApp.csproj", "{3226E238-AE83-4517-AF2D-0D0785AC6DE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "30_WeatherDisplay", "30_WeatherDisplay\30_WeatherDisplay.csproj", "{5E4093E9-0BE5-44E2-8591-ACB4987F47C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "30_WeatherDisplay", "30_WeatherDisplay\30_WeatherDisplay.csproj", "{5E4093E9-0BE5-44E2-8591-ACB4987F47C8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "34_PasswordGenerator", "34_PasswordGenerator\34_PasswordGenerator.csproj", "{1E41F3CB-642A-4E0F-8258-8F6079ECBCFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "35_NotepadWithAutosave", "35_NotepadWithAutosave\35_NotepadWithAutosave.csproj", "{C32E9B07-45D9-4E18-B897-F4A4C87D4172}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "35_NotepadWithAutosave", "35_NotepadWithAutosave\35_NotepadWithAutosave.csproj", "{C32E9B07-45D9-4E18-B897-F4A4C87D4172}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EggTimer", "36_EggTimer\EggTimer.csproj", "{68329A6C-28A6-41DF-B730-D848FC29CBB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -250,6 +252,10 @@ Global
 		{C32E9B07-45D9-4E18-B897-F4A4C87D4172}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C32E9B07-45D9-4E18-B897-F4A4C87D4172}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C32E9B07-45D9-4E18-B897-F4A4C87D4172}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68329A6C-28A6-41DF-B730-D848FC29CBB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68329A6C-28A6-41DF-B730-D848FC29CBB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68329A6C-28A6-41DF-B730-D848FC29CBB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68329A6C-28A6-41DF-B730-D848FC29CBB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -292,6 +298,7 @@ Global
 		{5E4093E9-0BE5-44E2-8591-ACB4987F47C8} = {64C33468-9504-4D65-99A7-986514502824}
 		{1E41F3CB-642A-4E0F-8258-8F6079ECBCFC} = {64C33468-9504-4D65-99A7-986514502824}
 		{C32E9B07-45D9-4E18-B897-F4A4C87D4172} = {64C33468-9504-4D65-99A7-986514502824}
+		{68329A6C-28A6-41DF-B730-D848FC29CBB6} = {64C33468-9504-4D65-99A7-986514502824}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F895072B-4805-4DD7-A020-BA7406872507}
