@@ -19,33 +19,30 @@ namespace EggTimer
         }
         #endregion
 
-
-
         #region ------------- Fields --------------------------------------------------------------
         private TimeSpan _seconds = TimeSpan.FromSeconds(5);
         private DispatcherTimer _timer;
         private bool _running;
         #endregion
 
-
-
         #region ------------- Init ----------------------------------------------------------------
         public MainWindow()
         {
             InitializeComponent();
-            SetupTimer();
+            _timer = SetupTimer();
             Seconds = TimeSpan.FromSeconds(5);
         }
         #endregion
 
-
-
         #region ------------- Implementation ------------------------------------------------------
         private void Button_Preselect_Click(object sender, RoutedEventArgs e)
         { 
-            var buttonText = (sender as System.Windows.Controls.Button).Tag;
-            var newValue = Convert.ToInt32(buttonText) * 60;
-            Seconds = TimeSpan.FromSeconds(newValue);
+            if (sender is System.Windows.Controls.Button myButton)
+            {
+                var buttonText = myButton.Tag;
+                var newValue = Convert.ToInt32(buttonText) * 60;
+                Seconds = TimeSpan.FromSeconds(newValue);
+            }
         }
 
         private void Button_Start_Click(object sender, RoutedEventArgs e)
@@ -90,11 +87,12 @@ namespace EggTimer
              player.Play();
         }
 
-        private void SetupTimer()
+        private DispatcherTimer SetupTimer()
         {
-            _timer = new DispatcherTimer();
-            _timer.Interval = new TimeSpan(0, 0, 1);
-            _timer.Tick += Count;
+            var timer = new DispatcherTimer();
+            timer.Interval = new TimeSpan(0, 0, 1);
+            timer.Tick += Count;
+            return timer;
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
