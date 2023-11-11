@@ -12,8 +12,8 @@
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" Margin="100,205,81,169" HorizontalAlignment="Center" >
-            <Button Content="4m" HorizontalAlignment="Left" Margin="0,0,10,0" VerticalAlignment="Top" 
-                    Height="55" Width="70" FontSize="30" Tag="4" Click="Button_Preselect_Click"/>
+            <Button Content="10s" HorizontalAlignment="Left" Margin="0,0,10,0" VerticalAlignment="Top" 
+                    Height="55" Width="70" FontSize="30" Tag="10s" Click="Button_Preselect_Click"/>
 
             <Button Content="5m" HorizontalAlignment="Left" Margin="0,0,10,0" VerticalAlignment="Top" 
                     Height="55" Width="70" FontSize="30" Tag="5" Click="Button_Preselect_Click"/>

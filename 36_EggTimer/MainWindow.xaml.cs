@@ -37,10 +37,16 @@ namespace EggTimer
         #region ------------- Implementation ------------------------------------------------------
         private void Button_Preselect_Click(object sender, RoutedEventArgs e)
         { 
-            if (sender is System.Windows.Controls.Button myButton)
+            if (sender is System.Windows.Controls.Button myButton)  
             {
-                var buttonText = myButton.Tag;
-                var newValue = Convert.ToInt32(buttonText) * 60;
+                var buttonTag = (string)myButton.Tag;
+                
+                int newValue;
+                if (buttonTag.EndsWith('s'))
+                    newValue = Convert.ToInt32(buttonTag.Substring(0,buttonTag.Length-1));
+                else
+                    newValue = Convert.ToInt32(buttonTag) * 60;
+
                 Seconds = TimeSpan.FromSeconds(newValue);
             }
         }

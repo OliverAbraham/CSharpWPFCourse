@@ -1,6 +1,18 @@
-# WPF Course
+# WPF Course example code
 
-This repository contains several demo programs from my WPF course.
+![](https://img.shields.io/github/downloads/oliverabraham/WPF-Course/total) ![](https://img.shields.io/github/license/oliverabraham/WPF-Course) ![](https://img.shields.io/github/languages/count/oliverabraham/WPF-Course) ![GitHub Repo stars](https://img.shields.io/github/stars/oliverabraham/WPF-Course?label=repo%20stars) ![GitHub Repo stars](https://img.shields.io/github/stars/oliverabraham?label=user%20stars)
+
+
+# OVERVIEW
+
+This repository contains several demo programs from my C# WPF Course.
+Even without my course, you can use this repository to learn C#.
+
+
+
+
+
+# Chapters
 
 ## Layout
 #### Grids
@@ -177,3 +189,44 @@ to learn more about Alignment, Margins and padding.
 #### Notepad with autosave
 - Shows how to build an app that saves all your data automatically
 - You don't need to press save buttons
+
+
+
+
+
+## License
+
+Licensed under Apache licence.
+https://www.apache.org/licenses/LICENSE-2.0
+
+
+## Compatibility
+
+The nuget package was build with DotNET 6.
+
+
+
+## AUTHOR
+
+Oliver Abraham, mail@oliver-abraham.de, https://www.oliver-abraham.de
+
+Please feel free to comment and suggest improvements!
+
+
+
+## SOURCE CODE
+
+The source code is hosted at:
+
+https://github.com/OliverAbraham/WPF-Course
+
+
+
+## SCREENSHOTS
+
+
+# MAKE A DONATION !
+If you find this application useful, buy me a coffee!
+I would appreciate a small donation on https://www.buymeacoffee.com/oliverabraham
+
+<a href="https://www.buymeacoffee.com/app/oliverabraham" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
