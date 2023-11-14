@@ -128,13 +128,19 @@ to learn more about Alignment, Margins and padding.
 #### 07_Data grids for editing
 - Editing grid cells, to save the details window
 
-#### Speech bubble tooltips
+#### 08_Speech bubble tooltips
 - Display a small help text when you hover over a control
 - Display introductory texts that explain the usage
 
-#### Speech bubbles_on_click
+#### 09_Speech bubbles_on_click
 - Help texts appear at program start and the user has to click them away
 - This is meant for explanatory texts, when the user starts your app the first time
+
+#### 10_PropertyGrid
+- Writing settings dialogs is boring. Use a property grid instead!
+- This app demonstrates how to load/save settings easily from a file
+- This app demonstrates how to easily edit your setting in a property grid. 
+- You don't need to edit controls
 
 
 
